@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Create /Library/LaunchDaemons/com.user.unblockweb.plist -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.unblock</string>
+
+    <!-- This is where the .sh script is called -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/usr/local/bin/unblock.sh</string>
+    </array>
+
+    <!-- Schedule: Every day at 17:00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>17</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+</dict>
+</plist>
